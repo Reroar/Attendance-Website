@@ -128,15 +128,20 @@ const Contacts = () => {
   };
 
   return (
+    <div className="student">
+    <div>
+      <h3 style={{color:"black"}}>Students</h3>
+      <p style={{color:"black"}}>Enter the details below</p>
+    </div>
     <div className="app-container">
       <form onSubmit={handleEditFormSubmit}>
-        <table>
+        <table class="table table-dark table-striped" >
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Address</th>
-              <th>Phone Number</th>
-              <th>Email</th>
+              <th>Student Name</th>
+              <th>Batch Name</th>
+              <th>Roll No.</th>
+              <th>Email ID</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -162,7 +167,7 @@ const Contacts = () => {
         </table>
       </form>
 
-      <h2>Add Student</h2>
+      <h2 style={{color:"black"}}>Add Student</h2>
       <form onSubmit={handleAddFormSubmit}>
         <input
           type="text"
@@ -194,6 +199,7 @@ const Contacts = () => {
         />
         <button type="submit">Add</button>
       </form>
+    </div>
     </div>
   );
 };

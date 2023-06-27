@@ -8,6 +8,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import './Topbar.css';
 
 const Topbar = () => {
   const theme = useTheme();
@@ -15,11 +16,12 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box display="flex" justifyContent="space-between" p={2} backgroundColor={colors.primary[100]}>
+    <Box className="topbox" display="flex" justifyContent="space-between" p={2} >
       {/* SEARCH BAR */}
       <Box
         display="flex"
-        backgroundColor={colors.primary[200]}
+        // backgroundColor={colors.primary[200]}
+        style={{backgroundColor:"#2f303b"}}
         borderRadius="3px"
       >
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
@@ -46,9 +48,10 @@ const Topbar = () => {
         {/* <IconButton>
           <PersonOutlinedIcon />
         </IconButton> */}
-       <Button variant="contained" color="success">
+       {/* <Button variant="contained" color="success">
   Admin Name
-</Button>
+</Button> */}
+<button className="btn">Admin Panel</button>
       </Box>
     </Box>
   );

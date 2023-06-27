@@ -12,13 +12,14 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import './index.css'
 
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px" >
+    <Box m="20px" style={{backgroundColor:"#f5f5f5"}}>
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="" />
@@ -41,6 +42,7 @@ const Dashboard = () => {
 
       {/* GRID & CHARTS */}
       <Box
+        // style={{backgroundColor:"#ffffff"}}
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows="140px"
@@ -48,8 +50,9 @@ const Dashboard = () => {
       >
         {/* ROW 1 */}
         <Box
+          className="tile"
           gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={"#ffffff"}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -67,8 +70,9 @@ const Dashboard = () => {
           />
         </Box>
         <Box
+          className="tile"
           gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={"#ffffff"}
           display="flex"
           alignItems="center"
           justifyContent="center"

@@ -43,19 +43,23 @@ const Sidebar = () => {
 
   return (
     <Box
+
+    style={{backgroundColor:"#16151c"}}
       sx={{
         "& .pro-sidebar-inner": {
-          background: `${colors.primary[100]} !important`,
-          borderRight: "2px solid black"
+          background: `${"#16151c"} !important`,
+          // borderRight: "2px solid black"
         },
         "& .pro-icon-wrapper": {
           backgroundColor: "transparent !important",
+          color: "white"
         },
         "& .pro-inner-item": {
-          padding: "5px 35px 5px 20px !important",
+          // padding: "5px 35px 5px 20px !important",
+          color: "#ffff"
         },
         "& .pro-inner-item:hover": {
-          color: "#868dfb !important",
+          color: "#ffff !important",
         },
         "& .pro-menu-item.active": {
           color: "#6870fa !important",
